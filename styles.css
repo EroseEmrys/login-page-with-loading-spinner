@@ -1,0 +1,168 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    transition: opacity 0.75s, visibility 0.75s;
+    z-index: 1000;
+}
+
+.loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: '';
+    width: 80px;
+    height: 80px;
+    border: 10px solid rgba(51, 51, 51, 0.1);
+    border-top-color: blueviolet;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from { transform: rotate(0turn); }
+    to { transform: rotate(1turn); }
+}
+
+body {
+    background-image: url("mythical-video-game-inspired-landscape-with-human.jpg");
+    background-size: cover;
+    margin: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input input {
+    width: 400px;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid #ccc;
+    margin: 15px;
+    padding: 20px;
+    font-size: 16px; 
+    color: #fffefe; 
+    backdrop-filter: blur(15px);
+}
+
+.input input::placeholder {
+    color: rgba(0, 0, 0, 0.8); 
+}
+
+.input input:focus::placeholder {
+    transform: translateY(-100%);
+    transition: transform 0.2s ease-in-out;
+    font-size: 14px;
+}
+
+.Frogot {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.712);
+}
+
+.Frogot:hover {
+    text-decoration: underline;
+    color: #fffffffd;
+}
+
+.new {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.712);
+}
+
+.new:hover {
+    text-decoration: underline;
+    color: #fffffffd;
+}
+
+.wrapper {
+    text-align: center;
+    border: 1px solid rgb(241, 241, 241);
+    border-radius: 12px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper h1 {
+    font-size: 30px;
+    color: #fffefe;
+}
+
+.button-17 {
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid transparent; 
+    color: #3c4043;
+    cursor: pointer;
+    font-size: 16px; 
+    font-weight: 500;
+    margin: 10px;
+    padding: 8px 30px; 
+    text-align: center;
+    text-transform: none;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.button-17:hover {
+    background: #F6F9FE;
+    color: #174ea6;
+}
+
+.button-17:active {
+    box-shadow: 0 4px 4px 0 rgba(60, 64, 67, 0.3), 0 8px 12px 6px rgba(60, 64, 67, 0.15);
+    outline: none;
+}
+
+.button-17:focus {
+    outline: none;
+    border: 2px solid #4285f4;
+}
+
+@media (max-width: 1024px) {
+    .input input,
+    .button-17 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .input input,
+    .button-17 {
+        font-size: 12px;
+        padding: 15px;
+    }
+}

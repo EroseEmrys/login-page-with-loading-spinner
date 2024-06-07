@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loader"></div>
+    <div class="overlay">
+        <div class="wrapper">
+            <h1>Welcome Again</h1>
+            <form action="/submit" method="post">
+                <div class="input">
+                    <input type="email" id="email" placeholder="Enter Your Email" required>
+                </div>
+                <div class="input">
+                    <input type="password" id="password" placeholder="Enter Your Password" required>
+                </div>
+                <div>
+                    <a href="#" class="Frogot">Forgot Password</a>
+                </div>
+                <div>
+                    <button type="submit" class="button-17 login">Login</button>
+                </div>
+                <div>
+                    <a href="SignIn.html" class="new">You Don't Have an Account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        window.addEventListener('load', function() {
+            const loader = document.querySelector('.loader');
+            loader.classList.add('loader--hidden');
+            loader.addEventListener('transitionend', function() {
+                document.body.removeChild(loader);
+            });
+        });
+    </script>
+</body>
+</html>
